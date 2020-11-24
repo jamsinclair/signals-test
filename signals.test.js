@@ -33,5 +33,10 @@ const testSigterm = async () => {
   console.log('SIGTERM test passed')
 }
 
-testSigint()
-testSigterm()
+
+console.log('start test')
+console.log('----------')
+Promise.all([
+  testSigint(),
+  testSigterm()
+]).then(() => console.log('finished tests'))
