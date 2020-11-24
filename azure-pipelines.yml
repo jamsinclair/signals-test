@@ -17,5 +17,8 @@ steps:
 
 - script: |
     yarn
+  displayName: 'install'
+
+- script: |
     yarn test
-  displayName: 'install and test'
+  displayName: 'test'
