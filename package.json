@@ -1,0 +1,9 @@
+{
+  "name": "windows-signals-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "cross-spawn": "^7.0.3"
+  }
+}
