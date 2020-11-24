@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "test": "node signals.test"
+  },
   "devDependencies": {
     "cross-spawn": "^7.0.3"
   }
