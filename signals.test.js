@@ -3,10 +3,12 @@ const spawn = require('cross-spawn');
 const startProcess = (instanceCallback) => {
   return new Promise((resolve, reject) => {
     const child = spawn('node', ['longProcess.js']);
+    console.log(`Started process ${child.pid}`)
 
     instanceCallback(child)
 
     child.on('close', (code, signal) => {
+      console.log(`process ${child.pid} closed with ${code} and ${signal}`)
       resolve({ code })
     });
   }) 
@@ -32,7 +34,6 @@ const testSigterm = async () => {
   }
   console.log('SIGTERM test passed')
 }
-
 
 console.log('start test')
 console.log('----------')
